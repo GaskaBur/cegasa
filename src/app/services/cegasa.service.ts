@@ -32,6 +32,7 @@ export class CegasaService {
           localStorage.setItem('tokenUser', response.token.token);
           console.log(response.token.token);
           this.loggedUserSubject.next(response);  
+          //Redirigo a raiz
           this.router.navigate(['/'])
         }
               
