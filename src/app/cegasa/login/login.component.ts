@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Usuario } from 'src/app/models/usuario';
+import { Usuario } from '../../models/usuario';
+import { CegasaService } from '../../services/cegasa.service';
 
 @Component({
   selector: 'app-login',
@@ -8,12 +9,20 @@ import { Usuario } from 'src/app/models/usuario';
 })
 export class LoginComponent implements OnInit {
 
-  usuario: Usuario;
-  constructor(u:Usuario) {
-    this.usuario = u;
-   }
+  usuario:Usuario = new Usuario('','');
+  u:string = '';
 
+  constructor(private cegasa:CegasaService) {
+
+  }
+  
   ngOnInit(): void {
+  }
+
+  public submitLogin() {
+    this.cegasa.login(this.usuario).subscribe((result: any) => {
+      console.log(result)
+    });    
   }
 
 }

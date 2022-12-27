@@ -5,15 +5,20 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
 
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
   declarations: [
     LoginComponent,
-    CalculadoraComponent
+    CalculadoraComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    MatInputModule,
+    MatButtonModule,
   ],
   exports : [
     LoginComponent,

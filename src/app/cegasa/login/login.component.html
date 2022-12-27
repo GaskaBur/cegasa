@@ -1,1 +1,14 @@
-<p>login works!</p>
+
+<div class="contenedor">
+
+    <mat-form-field>
+        <input matInput [(ngModel)]="usuario.mail" type="text" placeholder="Ingrese primer valor" class="form-control">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput [(ngModel)]="usuario.pass" type="text" placeholder="Ingrese segundo valor" class="form-control">
+    </mat-form-field>
+
+    <button mat-raised-button color="secondary" (click)="submitLogin()">Sumar</button>
+
+</div>
