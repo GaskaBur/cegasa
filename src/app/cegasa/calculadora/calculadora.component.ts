@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Ebick } from 'src/app/models/ebick';
 import { CegasaService } from 'src/app/services/cegasa.service';
+
 
 @Component({
   selector: 'app-calculadora',
@@ -8,6 +10,8 @@ import { CegasaService } from 'src/app/services/cegasa.service';
   styleUrls: ['./calculadora.component.css']
 })
 export class CalculadoraComponent implements OnInit {
+
+  ebick: Ebick = new Ebick;
 
   constructor(private cegasa: CegasaService, private router:Router) { }
 
