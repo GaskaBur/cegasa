@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
 import { Usuario } from '../models/usuario';
+import { Ebick } from '../models/ebick';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
@@ -43,5 +44,25 @@ export class CegasaService {
   logoutUser() {
     localStorage.removeItem('tokenUser');
     this.loggedUserSubject.next(null);
+  }
+
+  public calculate(ebick:Ebick) {
+    return this.conector.post<any>(this.url + 'calculate', ebick)
+      .pipe(map(response => {
+
+         /* 
+        if (response.token.token) {
+          localStorage.setItem('tokenUser', response.token.token);
+          console.log(response.token.token);
+          console.log('Respuesta');
+          
+          this.loggedUserSubject.next(response);
+          //Deberia de enviar la respusta
+          this.router.navigate(['/'])
+        }
+        */
+
+        return response.ebick;
+      }));;
   }
 }

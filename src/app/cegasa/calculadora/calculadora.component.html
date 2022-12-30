@@ -1,14 +1,16 @@
 <p>calculadora works!</p>
 <p>datos</p>
-creg
+<label for="Creq">Creq</label>
 <input type="text" [(ngModel)]="ebick.Creq"> 
-vnonsys
+<label for="VnomSYS">VnomSYS</label>
 <input type="text" [(ngModel)]="ebick.VnomSYS">
-vminsys
+<label for="VminSYS">VminSYS</label>
 <input type="text" [(ngModel)]="ebick.VminSYS"> 
-vmasxys
+<label for="VmaxSYS">VmaxSYS</label>
 <input type="text" [(ngModel)]="ebick.VmaxSYS"> 
-pnom
+<label for="Pnom">Pnom</label>
 <input type="text" [(ngModel)]="ebick.Pnom"> 
+<button (click)="calculate()">Enviar</button>
 <br>
+<p>{{respuesta}}</p>
 <a href="" (click)="logout()">Cerrar Sesión</a>

@@ -12,6 +12,7 @@ import { CegasaService } from 'src/app/services/cegasa.service';
 export class CalculadoraComponent implements OnInit {
 
   ebick: Ebick = new Ebick;
+  respuesta:Object= {};
 
   constructor(private cegasa: CegasaService, private router:Router) { }
 
@@ -27,6 +28,14 @@ export class CalculadoraComponent implements OnInit {
     alert('cerrar');
     this.cegasa.logoutUser();
 
+  }
+  calculate() {
+    console.log(this.ebick);
+    
+    this.cegasa.calculate(this.ebick).subscribe((result: any) => {
+      console.log(result)
+      this.respuesta = result;
+    });  
   }
 
 }
