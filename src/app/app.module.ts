@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import { CegasaModule } from './cegasa/cegasa.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthInterceptor } from './auth.interceptor';
+import { TemplatesModule } from './templates/templates.module';
+
 
 
 @NgModule({
@@ -22,7 +24,8 @@ import { AuthInterceptor } from './auth.interceptor';
     CegasaModule,
     HttpClientModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    TemplatesModule
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }],
   bootstrap: [AppComponent]
