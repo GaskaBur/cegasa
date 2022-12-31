@@ -50,17 +50,12 @@ export class CegasaService {
     return this.conector.post<any>(this.url + 'calculate', ebick)
       .pipe(map(response => {
 
-         /* 
-        if (response.token.token) {
-          localStorage.setItem('tokenUser', response.token.token);
-          console.log(response.token.token);
-          console.log('Respuesta');
-          
+         
+        if (response.token.token.token) {
+          localStorage.setItem('tokenUser', response.token.token.token);
           this.loggedUserSubject.next(response);
-          //Deberia de enviar la respusta
-          this.router.navigate(['/'])
         }
-        */
+        
 
         return response.ebick;
       }));;

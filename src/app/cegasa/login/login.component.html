@@ -2,11 +2,11 @@
 <div class="contenedor">
 
     <mat-form-field>
-        <input matInput [(ngModel)]="usuario.mail" type="text" placeholder="Correo electrónico" class="form-control">
+        <input matInput color="secondary" [(ngModel)]="usuario.mail" type="text" placeholder="Correo electrónico" class="form-control">
     </mat-form-field>
 
     <mat-form-field>
-        <input matInput [(ngModel)]="usuario.pass" type="password" placeholder="Contraseña" class="form-control">
+        <input matInput color="secondary" [(ngModel)]="usuario.pass" type="password" placeholder="Contraseña" class="form-control">
     </mat-form-field>
 
     <button mat-raised-button color="secondary" (click)="submitLogin()">Entrar en Cegasa</button>

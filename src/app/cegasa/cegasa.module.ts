@@ -7,6 +7,9 @@ import { CalculadoraComponent } from './calculadora/calculadora.component';
 
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 
 
 @NgModule({
@@ -19,6 +22,7 @@ import { MatButtonModule } from '@angular/material/button';
     FormsModule,
     MatInputModule,
     MatButtonModule,
+    BrowserAnimationsModule
   ],
   exports : [
     LoginComponent,

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Usuario } from '../../models/usuario';
 import { CegasaService } from '../../services/cegasa.service';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',

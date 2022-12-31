@@ -12,5 +12,29 @@
 <input type="text" [(ngModel)]="ebick.Pnom"> 
 <button (click)="calculate()">Enviar</button>
 <br>
-<p>{{respuesta}}</p>
+
 <a href="" (click)="logout()">Cerrar Sesión</a>
+<h3>Resultado</h3>
+<ul>
+    <li>Creq: {{ebick.Creq}}</li>
+    <li>VnomSYS: {{ebick.VnomSYS}}</li>
+    <li>VminSYS: {{ebick.VminSYS}}</li>
+    <li>VmaxSYS: {{ebick.VmaxSYS}}</li>
+    <li>Pnom: {{ebick.Pnom}}</li>
+    <li>ExtCom : {{ebick.ExtCom}}</li>
+    <li>ExtPotPar: {{ebick.ExtPotPar}}</li>
+    <li>ExtPotSer : {{ebick.ExtPotSer}}</li>
+    <li>ExtPotSerCol: {{ebick.ExtPotSerCol}}</li>
+    <li>MCP: {{ebick.MCP}}</li>
+    <li>MCP SLAVE:{{ebick.MCP_slave}}</li>
+    <li>NUMP: {{ebick.NumP}}</li>
+    <li>NUMS: {{ebick.NumS}}</li>
+    <li>KitPotSer: {{ebick.KitPotSer}}</li>
+    <li>mcp_txt: {{ebick.mcp_txt}}</li>
+    <li>SYStype: {{ebick.SYStype}}</li>
+</ul>
+<hr>
+<h3>columnas</h3>
+<ul *ngFor="let item of ebick.columnas">
+    <li>{{item}}</li>
+</ul>
